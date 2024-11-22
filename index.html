@@ -1,0 +1,24 @@
+<script>
+    class person{
+
+        constructor(name,age,country){
+            this.name = name,
+            this.age = age,
+            this.country = country
+        }
+
+        info(){
+            console.log(`
+            name : ${this.name},
+            age: ${this.age},
+            country: ${this.country}
+            `)
+        }
+    }
+
+    let p = new person('vishnu',28,'India');
+    let p2 = new person('kabir',26,'India');
+
+    p.info();
+    p2.info()
+</script>

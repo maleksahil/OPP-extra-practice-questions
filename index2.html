@@ -1,0 +1,25 @@
+<script>
+    class rectangle{
+        constructor(height,width){
+            this.height = height,
+            this.width = width
+        }
+
+        calculatearea(){
+            let area = this.height * this.width;
+            console.log(`height is ${this.height}, 
+widht is ${this.width}`)
+            console.log('area of rectangle is ' + area)
+        }
+
+        calculateperimeter(){
+            let perimeter = 2*(this.height + this.width)
+            console.log('perimeter of rectangle is '+ perimeter)
+        }
+    }
+
+    let ans = new rectangle(25,40);
+
+    ans.calculatearea();
+    ans.calculateperimeter();
+</script>

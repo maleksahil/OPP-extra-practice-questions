@@ -1,0 +1,38 @@
+<script>
+    class Bank{
+        constructor(){
+            this.bankname = '';
+            this.branches = [];
+        }
+
+        addbranch(branch){
+            this.branches.push(branch)
+            console.log('branch added successfully.')
+        }
+
+        removebranch(branch){
+            const index = this.branches.indexOf(branch);
+            this.branches.splice(index,1);
+            console.log(`${branch} removed successfully`)
+        }
+
+        displaybranches(){
+            this.branches.forEach((branch,index)=>{
+                console.log(`${index+1}. ${branch}`);
+            })
+        }
+    }
+
+    let bank = new Bank();
+
+    bank.addbranch('branch A');
+    bank.addbranch('branch B');
+    bank.addbranch('branch C');
+
+    bank.displaybranches()
+
+    bank.removebranch('branch B');
+
+    bank.displaybranches()
+
+</script>

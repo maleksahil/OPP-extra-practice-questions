@@ -1,0 +1,40 @@
+<script>
+    class university{
+        constructor(name){
+            this.name = name;
+            this.departments = [];
+        }
+
+        adddepartment(department){
+            this.departments.push(department);
+            console.log(`Department ${department} add to ${this.name}`)
+        }
+
+        removedepartment(department){
+            const index = this.departments.indexOf(department)
+
+            this.departments.splice(index,1)
+
+            console.log(`Department ${department} removed from ${this.name}`)
+        }
+
+        displaydepartment(){
+            console.log(`departments in ${this.name} are here`)
+            this.departments.forEach((department, index) =>{
+                console.log(`${index+1}.${department}`)
+            })
+        }
+    }
+
+    let univercity = new university('ABC univercity')
+
+    univercity.adddepartment('science')
+    univercity.adddepartment('mathamatics')
+    univercity.adddepartment('chemistry')
+
+    univercity.displaydepartment()
+
+    univercity.removedepartment('science')
+
+    univercity.displaydepartment()
+</script>

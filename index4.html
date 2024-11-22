@@ -1,0 +1,37 @@
+<script>
+    class Bank{
+        constructor(name,accountno,balance){
+            this.name = name,
+            this.accountno = accountno,
+            this.balance = balance
+        }   
+
+        deposit(){
+            let deposit = this.balance/4;
+            console.log(`
+                ${this.name} deposites rupees ${deposit}  
+            `)
+        }
+
+        withdraw(){
+            let withdraw = this.balance/10;
+            console.log(`
+                ${this.name} withdrawed rupees ${withdraw} 
+            `)
+        }
+
+        displaybalance(){
+            remainingbalance = this.balance + (this.balance/4) - (this.balance/10)
+            console.log(`
+                remaining balance is ${remainingbalance}
+            `)
+        }
+
+    }
+
+    let b = new Bank('raj',123456,5000)
+
+    b.deposit();
+    b.withdraw()
+    b.displaybalance()
+</script>

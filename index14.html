@@ -1,0 +1,24 @@
+<script>
+    class human{
+        constructor(name, favfood) {
+            this.name = name,
+            this.favfood = favfood
+        }
+
+        walk(){
+            console.log('human is walking')
+        }
+    }
+
+    class student extends human{
+        walk(){
+            console.log(this.name + ' student is walking')
+        }
+    }
+
+    let o = new student('harry','bhindi')
+
+    o.walk()
+
+    console.log(o instanceof human)
+</script>

@@ -1,0 +1,36 @@
+<script>
+    class Book{
+        constructor(title,author,publication) {
+            this.title = title,
+            this.author = author,
+            this.publication = publication
+        }
+
+        display(){
+            console.log(`
+            title: ${this.title},
+            author: ${this.author},
+            publication: ${this.publication}
+            `)
+        }
+    }
+
+    class Ebook extends Book{
+        constructor(title,author,publication,price) {
+            super(title,author,publication);
+            this.price = price
+            
+        }
+
+        display(){
+           super.display();
+           console.log(`Price: ${this.price}`)
+        }
+    }
+
+    let B = new Ebook('over the moon','hayuko','rameshvari publication',3000)
+
+    B.display()
+
+
+</script>

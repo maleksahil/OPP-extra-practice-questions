@@ -1,0 +1,40 @@
+<script>
+    class shape{
+        constructor(radius,height,width){
+            this.radius = radius,
+            this.height = height,
+            this.width = width
+        }
+    }
+
+    class circle extends shape{
+        constructor(radius){
+            super(radius)
+        }
+
+        area(){
+            let pi = 3.14;
+            let area_of_circle = 2* pi * this.radius
+            return(area_of_circle)
+        }
+    }
+
+    class triangle extends shape{
+        constructor(height,width){
+            super(0)
+            this.height = height,
+            this.width = width
+        }
+
+        area(){
+            let area_of_triangle = 0.5 * this.height * this.width;
+            return (area_of_triangle)
+        }
+    }
+    
+    let c = new circle(25)
+    let t = new triangle(25,20)
+
+    console.log(`area of circle is ${c.area()}`)
+    console.log(`area of triangle is ${t.area()}`)
+</script>

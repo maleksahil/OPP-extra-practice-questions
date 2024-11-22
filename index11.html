@@ -1,0 +1,48 @@
+<script>
+    class Bankaccount{
+        constructor(accountnumber,name,balance){
+            this.accountnumber = accountnumber,
+            this.name = name,
+            this.balance = balance
+        }
+
+        deposit(amount){
+             this.balance += amount
+             console.log(`${amount} deposited to ${this.accountnumber}`)
+        }
+
+        withdraw(amount){
+            this.balance -= amount
+            console.log(`${amount} withdrawed from ${this.accountnumber}`)
+        }
+
+        transfer(amount,recieptacount){
+              recieptacount.deposit(amount)
+              console.log(`${amount} transfered to ${recieptacount.accountnumber}`)
+        }
+
+        displaybalance(){
+            console.log(`
+            balance : ${this.balance}
+            accountnumber : ${this.accountnumber}
+            `)
+        }
+    }
+
+    let person1 = new Bankaccount('SBI-123','jay',5000)
+    let person2 = new Bankaccount('SBI-456','rahul',2000)
+
+    person1.displaybalance()
+
+    person1.deposit(500)
+
+    person1.displaybalance()
+
+    person1.withdraw(1000)
+
+    person1.displaybalance()
+
+    person1.transfer(500,person2)
+
+    person2.displaybalance()
+</script>

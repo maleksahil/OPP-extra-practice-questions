@@ -1,0 +1,35 @@
+<script>
+    class Employee{
+        constructor(name,salary){
+            this.name = name,
+            this.salary = salary,
+            console.log(`Name of the Employee is ${this.name}`)
+            console.log(`salalry of the Employee is ${this.salary}`)
+        }
+
+        calculateAnnualsalary(){
+            return this.salary * 12;
+        }
+    }
+
+    class manager extends Employee{
+        constructor(name,salary,department){
+            super(name,salary)
+            this.department = department
+        }
+
+        calculateAnnualsalary(){
+            const basesalary = super.calculateAnnualsalary();
+            const bonus = 0.1;
+            console.log(`Bonus (10% of salary is) ${bonus}`)
+
+            return (bonus * basesalary) + basesalary;
+        }
+    }
+
+    const manager1 = new manager('rahul',50000,'marketing')
+
+    console.log(`Annual salary of ${manager1.name} is ${manager1.calculateAnnualsalary()}`);
+
+    
+</script>

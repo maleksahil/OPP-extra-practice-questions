@@ -1,0 +1,30 @@
+<script>
+    class procuct{
+        constructor(name,id,price){
+            this.name = name,
+            this.id = id,
+            this.price = price
+        }
+
+        calculatetotalprice(quantity){
+            return this.price * quantity;
+        }
+    }
+
+    class personalcareproduct extends procuct {
+        constructor(name,id,price,warrenty){
+            super(name,id,price)
+            this.warrenty = warrenty
+        }
+
+        calculatetotalprice(quantity){
+            const totalprice = super.calculatetotalprice(quantity);
+            return totalprice + this.warrenty
+        }
+    }
+
+    let p = new personalcareproduct(1,'shampoo',10,2)
+
+    const totalprice = p.calculatetotalprice(3)
+    console.log(`total price is : ${totalprice}`)
+</script>

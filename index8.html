@@ -1,0 +1,32 @@
+<script>
+    class Animal{
+        constructor(species,sound){
+            this.species = species,
+            this.sound = sound
+        }
+
+        makesound(){
+            console.log(`
+            species: ${this.species},
+            sound: ${this.sound}
+            `)
+        }
+    }
+
+
+    class Dog extends Animal{
+        constructor(species,sound,color){
+            super(species,sound)
+            this.color = color;
+        }
+
+        makesound(){
+            super.makesound()
+            console.log(`color: ${this.color}`)
+        }
+    }
+
+    let A = new Dog('dog','woof woof','Brown');
+
+    A.makesound()
+</script>
