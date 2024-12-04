@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>http methods practice</title>
+  </head>
+  <body>
+    <button type="button" id="post">POST</button>
+    <button type="button" id="put">PUT</button>
+    <button type="button" id="patch">PATCH</button>
+    <button type="button" id="delete">DELETE</button>
+
+    <!-- <script>
+
+        let obj = {
+            "id": "1",
+            "name": "sahil",
+            "class": "12"
+        };
+
+        async function get() {
+            try{
+
+                let url = await fetch('http://localhost:3000/user',{
+                    "method": "POST",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body:JSON.stringify(obj)
+                })
+
+                console.log(url.status)
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+        let post = document.getElementById('post');
+
+        post.addEventListener("click",()=>{
+            get()
+        })
+
+    </script> -->
+
+    <!-- <script>
+
+        let deleter = document.getElementById("delete")
+        
+        async function get(){
+            
+            try{
+                
+                let url = await fetch("http://localhost:3000/user/1",{
+                    "method":"DELETE",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                })
+                
+                console.log(url.status)
+                
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+        deleter.addEventListener("click",get())
+    </script> -->
+
+    <!-- 
+    <script>
+
+        let patch = document.getElementById('patch');
+
+        let obj ={
+            "name":"jhon"
+        }
+    
+
+        async function get(){
+            try{
+            let url = await fetch('http://localhost:3000/user/1',{
+                "method":"PATCH",
+                headers:{
+                    "content-type":"application/json"
+                },
+                body:JSON.stringify(obj)
+            })
+
+            console.log(url.status)
+        }
+
+        catch(err){
+            console.log(err)
+        }
+    }
+
+        patch.addEventListener("click",()=>{
+            get()
+        })
+
+    </script> -->
+
+    <script>
+      let put = document.getElementById("put");
+
+      let obj = {
+        id: "3",
+        name: "amanadel",
+        class: "1251",
+      };
+
+     
+        async function get() {
+
+          try {
+
+            let url = await fetch("http://localhost:3000/user/3", {
+                "method":"PUT",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(obj),
+            });
+
+            console.log(url.status);
+
+          } catch (err) {
+            console.log(err);
+          }
+
+        }
+
+        put.addEventListener("click", () => {
+            get()
+        })
+      
+    </script>
+  </body>
+</html>
